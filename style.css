@@ -1,0 +1,146 @@
+:root {
+    
+/* ### Primary */
+
+--sedan-bgnClr: hsl(31, 77%, 52%);
+--suv-bgnClr: hsl(184, 100%, 22%);
+--luxury-bgnClr: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+
+--paraClr: hsla(0, 0%, 100%, 0.75);
+--Main-bgrn: hsl(0, 0%, 95%);
+--h2Clr: hsl(0, 0%, 95%);
+--btnClr: hsl(0, 0%, 95%);
+
+--h2-fam: 'Big Shoulders Display', sans-serif;
+--p-fam: 'Lexend Deca', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Main-bgrn);
+}
+
+.wrapper {
+    width: 320px;
+    max-width: 80em;
+    border-radius: 0.5em;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.type {
+    padding: 3em 0 2.8em 2.6em;
+}
+
+.type-one {
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.type-three {
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+
+img {
+    width: 3.5em;
+    margin-bottom: 1.4em;
+}
+
+h2 {
+    padding-bottom: 1em;    
+    text-transform: uppercase;
+    font-family: var(--h2-fam);
+    color: var(--h2Clr);
+    font-size: 2.3rem;
+}
+
+p {
+    padding: 0 1.7em 1.9em 0;
+    text-align: left;
+    font-family: var(--p-fam);
+    line-height: 1.5;
+    font-size: 1rem;
+    color: var(--paraClr);
+}
+
+.type .button {
+    background-color: var(--btnClr);
+    width: 9em;
+    text-align: center;
+    padding: 0.6em 1em;
+    border-radius: 5em;
+    font-size: 1rem;
+    border: 2px solid var(--h2Clr);
+}
+
+.type p.button {
+    color: inherit;
+}
+
+.type p.button:hover {
+    background-color: initial;
+    border: 2px solid var(--h2Clr);
+    color: var(--h2Clr);
+    cursor: pointer;
+}
+
+.type-one  {
+    color: var(--sedan-bgnClr);
+    background-color: var(--sedan-bgnClr);
+}
+
+.type-two {
+    color: var(--suv-bgnClr);
+    background-color: var(--suv-bgnClr);
+}
+.type-three {
+    color: var(--luxury-bgnClr);
+    background-color: var(--luxury-bgnClr);
+}
+
+@media screen and (min-width: 1098px) {
+
+    .wrapper {
+        display: flex;
+        width: 68em;
+    }
+
+    .type {
+        padding: 3em 0 4em 3.2em;
+        border-radius: 0;
+    }
+
+    .type:nth-child(1){
+        border-radius: 0.5em 0 0 0.5em;
+    }
+
+    .type:nth-child(3){
+        border-radius: 0 0.5em 0.5em 0;
+    }
+
+    img {
+        width: 4em;
+        margin-bottom: 1.8em;
+    } 
+    
+    p {
+        padding: 0 4.1em 6.5em 0;
+        font-size: 1.05rem;
+    }
+    h2 {
+        font-size: 2.6rem;       
+    }
+}
